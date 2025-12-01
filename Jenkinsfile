@@ -5,13 +5,6 @@ pipeline{
     
 		stage( 'clone' ){
 		steps{
-			git branch:'master' ,url:'pipeline{
-	agent any
-  
-	stages{
-    
-		stage( 'clone' ){
-		steps{
 			git branch:'master' ,url:'https://github.com/likhithaal/Amazon-Ecom.git'
 		    }
     }
