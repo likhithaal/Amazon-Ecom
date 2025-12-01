@@ -7,48 +7,25 @@ pipeline{
 		steps{
 			git branch:'master' ,url:'https://github.com/likhithaal/Amazon-Ecom.git'
 		    }
-    }
+  		}
       
 		stage( 'clean' ){
 		steps{
 			sh 'mvn clean'
-		    }
-    }
-      
+			}
+		}
+		
 		stage( 'test' ){
 		steps{
 			sh 'mvn test'
-		    }
-    }
-      
+			}
+		}
+		
 		stage( 'build' ){
 		steps{
 			sh 'mvn clean install'
-		    }
+			}
 		}
-      
-	}
-}'
-		    }
-    }
-      
-		stage( 'clean' ){
-		steps{
-			sh 'mvn clean'
-		    }
-    }
-      
-		stage( 'test' ){
-		steps{
-			sh 'mvn test'
-		    }
-    }
-      
-		stage( 'build' ){
-		steps{
-			sh 'mvn clean install'
-		    }
-		}
-      
+		
 	}
 }
